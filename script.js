@@ -23,3 +23,11 @@ function addToChat(role, message) {
   box.appendChild(div);
   box.scrollTop = box.scrollHeight;
 }
+fetch("https://gymbuddy-api.onrender.com/chat", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ message: userInput })
+})
+
