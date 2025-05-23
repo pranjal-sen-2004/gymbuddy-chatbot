@@ -6,6 +6,9 @@ from typing import List, Dict
 import re, random
 
 app = FastAPI(title="GymBuddy Chatbot")
+@app.get("/ping")
+def ping():
+    return {"status": "ok"}
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # You can change this to ["http://localhost:5500"] for stricter security
