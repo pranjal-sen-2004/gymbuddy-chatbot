@@ -7,7 +7,7 @@ async function sendMessage() {
   input.value = "";
 
   try {
-    const res = await fetch("https://gymbuddy-api.onrender.com/chat", {
+    const res = await fetch("https://gymbuddy-chatbot.onrender.com/chat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ message, user_id: "user1" })
